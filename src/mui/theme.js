@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Arial",
+    fontFamily: "Arial, sans-serif",
   },
 });
 
