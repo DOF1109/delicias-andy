@@ -4,6 +4,8 @@ import theme from "../mui/theme";
 import { CssBaseline } from "@mui/material";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Delicias Andy",
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
+            <Header />
             {children}
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

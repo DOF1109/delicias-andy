@@ -6,7 +6,7 @@ const theme = createTheme({
     fontFamily: "Arial, sans-serif",
   },
   palette: {
-    type: "light",
+    mode: "light",
     primary: {
       main: "#ffc0cb",
     },
