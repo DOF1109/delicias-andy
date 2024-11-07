@@ -1,8 +1,10 @@
 "use client";
-const { AppBar, Container, Toolbar, Typography, Button, Box, alpha } = require("@mui/material");
+const { AppBar, Container, Toolbar, Typography, Button, Box, alpha, useTheme } = require("@mui/material");
 import { theme } from "@/mui/theme.js";
 
 const Header = () => {
+  const theme = useTheme();
+
   return (
     <AppBar 
       position="fixed" 
@@ -10,7 +12,7 @@ const Header = () => {
         boxShadow:0,
         bgcolor: "transparent",
         backgroundImage: "none",
-        mt: "1rem",
+        mt: "1.5rem",
       }}
     >
       <Container maxWidth="lg">
@@ -21,9 +23,12 @@ const Header = () => {
             justifyContent: "space-between",
             flexShrink: "0",
             borderRadius: "16px",
-            backdropFilter: "blur(24px)",
+            backdropFilter: "blur(.25rem)",
             border: "1px solid",
-            borderColor: alpha("#d7d7e8", 0.5)
+            borderColor: alpha(theme.palette.grey[300], 0.5),
+            backgroundColor: alpha(theme.palette.primary.main, 0.25),
+            boxShadow: theme.customShadow,
+            padding: ".5rem 1rem"
           }}
         >
           <Box>
