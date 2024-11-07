@@ -1,22 +1,32 @@
 "use client";
-const { AppBar, Container, Toolbar, Typography, Button, Box, alpha, useTheme } = require("@mui/material");
-import { theme } from "@/mui/theme.js";
+const {
+  AppBar,
+  Container,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  alpha,
+  useTheme,
+} = require("@mui/material");
+import AppleIcon from "@mui/icons-material/Apple";
+import Link from "next/link";
 
 const Header = () => {
   const theme = useTheme();
 
   return (
-    <AppBar 
-      position="fixed" 
+    <AppBar
+      position="fixed"
       sx={{
-        boxShadow:0,
+        boxShadow: 0,
         bgcolor: "transparent",
         backgroundImage: "none",
         mt: "1.5rem",
       }}
     >
       <Container maxWidth="lg">
-        <Toolbar 
+        <Toolbar
           sx={{
             display: "flex",
             alignItems: "center",
@@ -28,25 +38,35 @@ const Header = () => {
             borderColor: alpha(theme.palette.grey[300], 0.5),
             backgroundColor: alpha(theme.palette.primary.main, 0.25),
             boxShadow: theme.customShadow,
-            padding: ".5rem 1rem"
+            padding: ".5rem 1rem",
           }}
         >
-          <Box>
-            <Typography>Delicias Andy</Typography>
-            <Typography>Inicio</Typography>
-            <Typography>Servicios</Typography>
-            <Typography>Contacto</Typography>
+          <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
+            <AppleIcon />
+            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+              <Link href="/">
+                <Typography color={theme.dark}>Inicio</Typography>
+              </Link>
+              <Button variant="text" color="info" size="small">
+                Servicios
+              </Button>
+              <Button variant="text" color="info" size="small">
+                Contacto
+              </Button>
+            </Box>
           </Box>
           <Box>
-            <Button variant="contained" color="secondary">Haz tu pedido</Button>
+            <Button variant="contained" color="secondary">
+              Haz tu pedido
+            </Button>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 /*
 Guide
