@@ -47,3 +47,14 @@ const Header = () => {
 }
 
 export default Header
+
+/*
+Guide
+
+https://github.com/mui/material-ui/blob/v6.1.6/docs/data/material/getting-started/templates/marketing-page/components/AppAppBar.js
+
+https://github.com/mui/material-ui/blob/v6.1.6/docs/data/material/getting-started/templates/shared-theme/themePrimitives.js
+
+https://mui.com/material-ui/getting-started/templates/marketing-page/
+
+*/
