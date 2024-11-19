@@ -43,7 +43,7 @@ const Header = () => {
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
             <AppleIcon />
-            <Box sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}>
+            <Box sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center", ml:1 }}>
               <Link href="/" className="custom-link">
                 <Typography color={theme.dark} sx={{fontSize:14}}>INICIO</Typography>
               </Link>
