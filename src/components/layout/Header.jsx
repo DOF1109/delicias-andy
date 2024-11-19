@@ -43,16 +43,16 @@ const Header = () => {
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
             <AppleIcon />
-            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-              <Link href="/">
-                <Typography color={theme.dark}>Inicio</Typography>
+            <Box sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}>
+              <Link href="/" className="custom-link">
+                <Typography color={theme.dark} sx={{fontSize:14}}>INICIO</Typography>
               </Link>
-              <Button variant="text" color="info" size="small">
-                Servicios
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Contacto
-              </Button>
+              <Link href="/services" className="custom-link">
+                <Typography color={theme.dark} sx={{fontSize:14}}>SERVICIOS</Typography>
+              </Link>
+              <Link href="/contact" className="custom-link">
+                <Typography color={theme.dark} sx={{fontSize:14}}>CONTACTO</Typography>
+              </Link>
             </Box>
           </Box>
           <Box>

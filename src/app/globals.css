@@ -1,0 +1,11 @@
+.custom-link {
+    text-decoration: none;
+    margin: 0 .25rem;
+    padding: .1rem .25rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: rgba(245, 0, 87, 0.1);
+        border-radius: .25rem;
+    }
+}
