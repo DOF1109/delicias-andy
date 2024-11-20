@@ -50,7 +50,7 @@ const Header = () => {
             borderColor: alpha(theme.palette.grey[300], 0.5),
             backgroundColor: alpha(theme.palette.primary.main, 0.25),
             boxShadow: theme.customShadow,
-            padding: ".5rem 1rem",
+            padding: ".25rem 1rem",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
@@ -65,18 +65,18 @@ const Header = () => {
               }}
             >
               <Link href="/" className="custom-link">
-                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
-                  INICIO
+                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                  Inicio
                 </Typography>
               </Link>
               <Link href="/services" className="custom-link">
-                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
-                  SERVICIOS
+                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                  Servicios
                 </Typography>
               </Link>
               <Link href="/contact" className="custom-link">
-                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
-                  CONTACTO
+                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                  Contacto
                 </Typography>
               </Link>
             </Box>
@@ -111,9 +111,9 @@ const Header = () => {
                     <HighlightOffRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>INICIO</MenuItem>
-                <MenuItem>SERVICIOS</MenuItem>
-                <MenuItem>CONTACTO</MenuItem>
+                <MenuItem sx={{color: theme.dark, fontWeight: 600}}>Inicio</MenuItem>
+                <MenuItem sx={{color: theme.dark, fontWeight: 600}}>Servicios</MenuItem>
+                <MenuItem sx={{color: theme.dark, fontWeight: 600}}>Contacto</MenuItem>
                 <Divider />
                 <MenuItem>
                   <Button variant="contained" color="secondary" fullWidth>
