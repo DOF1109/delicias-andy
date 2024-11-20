@@ -1,6 +1,11 @@
+"use client"
+import { Container, Typography } from "@mui/material"
+
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Container component="footer" sx={{ py: 3 }}>
+      <Typography>Footer</Typography>
+    </Container>
   )
 }
 
