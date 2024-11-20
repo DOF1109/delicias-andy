@@ -8,12 +8,24 @@ const {
   Box,
   alpha,
   useTheme,
+  IconButton,
+  MenuItem,
+  Drawer,
+  Divider,
 } = require("@mui/material");
 import AppleIcon from "@mui/icons-material/Apple";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
   const theme = useTheme();
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const openDrawer = (newOpen) => {
+    setOpenMenu(newOpen);
+  };
 
   return (
     <AppBar
@@ -43,22 +55,73 @@ const Header = () => {
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
             <AppleIcon />
-            <Box sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center", ml:1 }}>
+
+            {/* Desktop */}
+            <Box
+              sx={{
+                display: { xs: "none", sm: "flex" },
+                alignItems: "center",
+                ml: 1,
+              }}
+            >
               <Link href="/" className="custom-link">
-                <Typography color={theme.dark} sx={{fontSize:14}}>INICIO</Typography>
+                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
+                  INICIO
+                </Typography>
               </Link>
               <Link href="/services" className="custom-link">
-                <Typography color={theme.dark} sx={{fontSize:14}}>SERVICIOS</Typography>
+                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
+                  SERVICIOS
+                </Typography>
               </Link>
               <Link href="/contact" className="custom-link">
-                <Typography color={theme.dark} sx={{fontSize:14}}>CONTACTO</Typography>
+                <Typography color={theme.dark} sx={{ fontSize: 14 }}>
+                  CONTACTO
+                </Typography>
               </Link>
             </Box>
           </Box>
-          <Box>
+          <Box
+            sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}
+          >
             <Button variant="contained" color="secondary">
               Haz tu pedido
             </Button>
+          </Box>
+
+          {/* Mobile */}
+          <Box sx={{ display: { xs: "flex", sm: "none" }, gap: 1 }}>
+            <IconButton
+              aria-label="Abrir menú"
+              onClick={() => openDrawer(true)}
+            >
+              <MenuRoundedIcon />
+            </IconButton>
+            <Drawer
+              anchor="top"
+              open={openMenu}
+              onClose={() => openDrawer(false)}
+            >
+              <Box sx={{ p: 2 }}>
+                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                  <IconButton
+                    aria-label="Cerrar menú"
+                    onClick={() => openDrawer(false)}
+                  >
+                    <HighlightOffRoundedIcon />
+                  </IconButton>
+                </Box>
+                <MenuItem>INICIO</MenuItem>
+                <MenuItem>SERVICIOS</MenuItem>
+                <MenuItem>CONTACTO</MenuItem>
+                <Divider />
+                <MenuItem>
+                  <Button variant="contained" color="secondary" fullWidth>
+                    Haz tu pedido
+                  </Button>
+                </MenuItem>
+              </Box>
+            </Drawer>
           </Box>
         </Toolbar>
       </Container>
