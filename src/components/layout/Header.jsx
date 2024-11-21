@@ -111,24 +111,30 @@ const Header = () => {
                     <HighlightOffRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem 
-                  sx={{color: theme.dark, fontWeight: 600}} 
-                  onClick={() => openDrawer(false)}
-                >
-                  <Link href="/" className="blank-link">Inicio</Link>
-                </MenuItem>
-                <MenuItem 
-                  sx={{color: theme.dark, fontWeight: 600}} 
-                  onClick={() => openDrawer(false)}
-                >
-                  <Link href="/services" className="blank-link">Servicios</Link>
-                </MenuItem>
-                <MenuItem 
-                  sx={{color: theme.dark, fontWeight: 600}} 
-                  onClick={() => openDrawer(false)}
-                >
-                  <Link href="/contact" className="blank-link">Contacto</Link>
-                </MenuItem>
+                <Link href="/" className="blank-link">
+                  <MenuItem 
+                    sx={{color: theme.dark, fontWeight: 600}} 
+                    onClick={() => openDrawer(false)}
+                  >
+                    Inicio
+                  </MenuItem>
+                </Link>
+                <Link href="/services" className="blank-link">
+                  <MenuItem 
+                    sx={{color: theme.dark, fontWeight: 600}} 
+                    onClick={() => openDrawer(false)}
+                  >
+                    Servicios
+                  </MenuItem>
+                </Link>
+                <Link href="/contact" className="blank-link">
+                  <MenuItem 
+                    sx={{color: theme.dark, fontWeight: 600}} 
+                    onClick={() => openDrawer(false)}
+                  >
+                    Contacto
+                  </MenuItem>
+                </Link>
                 <Divider />
                 <MenuItem>
                   <Button variant="contained" color="secondary" fullWidth>
