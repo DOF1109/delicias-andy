@@ -1,7 +1,7 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../mui/theme";
-import { CssBaseline } from "@mui/material";
+import { Container, CssBaseline } from "@mui/material";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -27,7 +27,9 @@ export default function RootLayout({ children }) {
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
-            {children}
+            <Container component="main" sx={{pt: 15, pb: 3}}>
+              {children}
+            </Container>
             <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>

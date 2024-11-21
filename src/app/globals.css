@@ -9,3 +9,8 @@
     border-radius: 0.25rem;
   }
 }
+
+.blank-link {
+  color: inherit;
+  text-decoration: none;
+}
