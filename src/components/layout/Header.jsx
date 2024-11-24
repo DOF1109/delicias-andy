@@ -12,16 +12,18 @@ const {
   MenuItem,
   Drawer,
   Divider,
+  useMediaQuery,
 } = require("@mui/material");
-import AppleIcon from "@mui/icons-material/Apple";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const Header = () => {
   const theme = useTheme();
   const [openMenu, setOpenMenu] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   const openDrawer = (newOpen) => {
     setOpenMenu(newOpen);
@@ -54,7 +56,16 @@ const Header = () => {
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
-            <AppleIcon />
+            <Box p={1} display="flex" alignItems="center" justifyContent="center">
+              <Link href="/">
+                <Image
+                  src="/assets/images/logo-delicias-andy.png"
+                  alt="Logo Delicias Andy"
+                  width={isMobile ? 40 : 50}
+                  height={isMobile ? 40 : 50}
+                />
+              </Link>
+            </Box>
 
             {/* Desktop */}
             <Box
