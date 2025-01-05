@@ -1,6 +1,8 @@
+import Banner from "@/components/layout/Banner"
+
 const HomePage = () => {
   return (
-    <p>HomePage</p>
+    <Banner />
   )
 }
 
