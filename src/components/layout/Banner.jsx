@@ -1,8 +1,12 @@
 "use client";
+
+import Image from "next/image";
+import cake1 from "@/../public/assets/images/cake1.jpeg";
+
 const { Box, Typography, Button, Grid2, useTheme } = require("@mui/material");
 
 const Banner = () => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Box
@@ -14,10 +18,10 @@ const Banner = () => {
         justifyContent: { xs: "center", md: "space-between" },
         p: 4,
         borderTopLeftRadius: "25px",
-        borderBottomRightRadius: "25px"
+        borderBottomRightRadius: "25px",
       }}
     >
-      <Box sx={{ flexGrow:{md: 2}, flexBasis: {md: "66.6%"}}}>
+      <Box sx={{ flexGrow: { md: 2 } }}>
         <Typography variant="h4" fontWeight={600}>
           Bienvenido a
         </Typography>
@@ -28,25 +32,47 @@ const Banner = () => {
           Descubre nuestras tortas y repostería, hechas con amor y los mejores
           ingredientes.
         </Typography>
-        <Button variant="contained" color="secondary" sx={{mt: {md: 5}}}>
+        <Button variant="contained" color="secondary" sx={{ mt: { md: 5 } }}>
           Conócenos
         </Button>
-        <Grid2 container spacing={2} mt={2} flexDirection={{xs: "column", md: "row"}} color={theme.dark}>
+        <Grid2
+          container
+          spacing={2}
+          mt={2}
+          flexDirection={{ xs: "column", md: "row" }}
+          color={theme.dark}
+        >
           <Grid2>
-            <Typography variant="h6" fontWeight={600}>100%</Typography>
+            <Typography variant="h6" fontWeight={600}>
+              100%
+            </Typography>
             <Typography variant="body2">Satisfacción garantizada</Typography>
           </Grid2>
           <Grid2>
-            <Typography variant="h6" fontWeight={600}>+50</Typography>
+            <Typography variant="h6" fontWeight={600}>
+              +50
+            </Typography>
             <Typography variant="body2">Variedades de tortas</Typography>
           </Grid2>
           <Grid2>
-            <Typography variant="h6" fontWeight={600}>+10</Typography>
+            <Typography variant="h6" fontWeight={600}>
+              +10
+            </Typography>
             <Typography variant="body2">Años de experiencia</Typography>
           </Grid2>
         </Grid2>
       </Box>
-      <Box sx={{ flexGrow: {md: 1}, flexBasis: {md: "33.3%"}}}>Image</Box>
+      <Box
+        sx={{
+          flexGrow: { md: 1 },
+        }}
+      >
+        <Image
+          src={cake1}
+          alt="Torta"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
     </Box>
   );
 };
