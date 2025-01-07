@@ -10,6 +10,7 @@ const Banner = () => {
 
   return (
     <Grid2
+      component="section"
       container
       spacing={6}
       sx={{
