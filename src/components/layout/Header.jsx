@@ -49,14 +49,19 @@ const Header = () => {
             borderRadius: "16px",
             backdropFilter: "blur(.25rem)",
             border: "1px solid",
-            borderColor: alpha(theme.palette.grey[300], 0.5),
+            borderColor: alpha(theme.palette.grey[300], 0.9),
             backgroundColor: alpha(theme.palette.primary.main, 0.25),
             boxShadow: theme.customShadow,
             padding: ".25rem 1rem",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
-            <Box p={1} display="flex" alignItems="center" justifyContent="center">
+            <Box
+              p={1}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
               <Link href="/">
                 <Image
                   src="/assets/images/logo-delicias-andy.png"
@@ -123,24 +128,24 @@ const Header = () => {
                   </IconButton>
                 </Box>
                 <Link href="/" className="blank-link">
-                  <MenuItem 
-                    sx={{color: theme.dark, fontWeight: 600}} 
+                  <MenuItem
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Inicio
                   </MenuItem>
                 </Link>
                 <Link href="/services" className="blank-link">
-                  <MenuItem 
-                    sx={{color: theme.dark, fontWeight: 600}} 
+                  <MenuItem
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Servicios
                   </MenuItem>
                 </Link>
                 <Link href="/contact" className="blank-link">
-                  <MenuItem 
-                    sx={{color: theme.dark, fontWeight: 600}} 
+                  <MenuItem
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Contacto

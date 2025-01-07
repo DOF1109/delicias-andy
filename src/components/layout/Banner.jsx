@@ -25,14 +25,14 @@ const Banner = () => {
         flexDirection="column"
         justifyContent="space-between"
       >
-        <Box>
+        <Box color={theme.dark}>
           <Typography variant="h4" fontWeight={600}>
             Bienvenido a
           </Typography>
           <Typography component="h1" variant="h4" fontWeight={600}>
             Delicias Andy
           </Typography>
-          <Typography mt={2} mb={5} color={theme.dark}>
+          <Typography mt={2} mb={5}>
             Descubre nuestras tortas y repostería, hechas con amor y los mejores
             ingredientes.
           </Typography>
@@ -45,7 +45,7 @@ const Banner = () => {
             container
             spacing={2}
             mt={2}
-            flexDirection={{ xs: "column", md: "row" }}
+            flexDirection={{ xs: "column", sm: "row" }}
             color={theme.dark}
           >
             <Grid2>
