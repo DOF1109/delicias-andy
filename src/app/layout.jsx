@@ -1,7 +1,7 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../mui/theme";
-import { Container, CssBaseline } from "@mui/material";
+import { Box, Container, CssBaseline } from "@mui/material";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -22,15 +22,18 @@ const montserratAlternates = Montserrat_Alternates({
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={montserratAlternates.className}>
+      <body 
+        className={montserratAlternates.className} 
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Header />
-            <Container component="main" sx={{pt: 15, pb: 3}}>
-              {children}
-            </Container>
-            <Footer />
+              <Header />
+              <Container component="main" sx={{pt: 15, flexGrow: 1}}>
+                {children}
+              </Container>
+              <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

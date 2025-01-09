@@ -1,11 +1,15 @@
 "use client"
-import { Container, Typography } from "@mui/material"
+import { Box, Container, Typography, useTheme } from "@mui/material"
 
 const Footer = () => {
+  const theme = useTheme()
+
   return (
-    <Container component="footer" sx={{ py: 3 }}>
-      <Typography>Footer</Typography>
-    </Container>
+    <Box component="footer" sx={{ backgroundColor: theme.black }}>
+      <Container component="footer" sx={{ py: 3 }}>
+        <Typography>Footer</Typography>
+      </Container>
+    </Box>
   )
 }
 
