@@ -20,8 +20,9 @@ const CustomCard = ({img, title}) => {
             />
             <CardContent sx={{backgroundColor: theme.palette.primary.main, p: 3}}>
                 <Typography 
-                    variant="h6"
+                    variant="subtitle1"
                     textAlign="center"
+                    fontWeight={500}
                 >
                     {title}
                 </Typography>
