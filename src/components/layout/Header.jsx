@@ -100,9 +100,11 @@ const Header = () => {
           <Box
             sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}
           >
-            <Button variant="contained" color="secondary">
-              Haz tu pedido
-            </Button>
+            <Link href="/">
+              <Button variant="contained" color="secondary">
+                Haz tu pedido
+              </Button>
+            </Link>
           </Box>
 
           {/* Mobile */}
@@ -153,9 +155,11 @@ const Header = () => {
                 </Link>
                 <Divider />
                 <MenuItem>
-                  <Button variant="contained" color="secondary" fullWidth>
-                    Haz tu pedido
-                  </Button>
+                  <Link href="/" className="full-width" onClick={() => openDrawer(false)}>
+                    <Button variant="contained" color="secondary" fullWidth>
+                      Haz tu pedido
+                    </Button>
+                  </Link>
                 </MenuItem>
               </Box>
             </Drawer>

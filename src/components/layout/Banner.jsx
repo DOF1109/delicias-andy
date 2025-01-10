@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import cake1 from "@/../public/assets/images/cake1.jpeg";
+import Link from "next/link";
 
 const { Box, Typography, Button, Grid2, useTheme } = require("@mui/material");
 
@@ -39,9 +40,11 @@ const Banner = () => {
           </Typography>
         </Box>
         <Box>
-          <Button variant="contained" color="secondary">
-            Conócenos
-          </Button>
+          <Link href="/services">
+            <Button variant="contained" color="secondary">
+              Conócenos
+            </Button>
+          </Link>
           <Grid2
             container
             spacing={2}

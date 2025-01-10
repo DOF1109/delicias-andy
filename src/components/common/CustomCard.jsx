@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const {
   Card,
-  CardContent,
   Typography,
   useTheme,
   alpha,
