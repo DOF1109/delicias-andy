@@ -22,18 +22,18 @@ const montserratAlternates = Montserrat_Alternates({
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body 
-        className={montserratAlternates.className} 
+      <body
+        className={montserratAlternates.className}
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-              <Header />
-              <Container component="main" sx={{pt: 15, flexGrow: 1}}>
-                {children}
-              </Container>
-              <Footer />
+            <Header />
+            <Container component="main" sx={{ pt: 15, flexGrow: 1 }}>
+              {children}
+            </Container>
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

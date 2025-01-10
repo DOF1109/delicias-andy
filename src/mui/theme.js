@@ -25,10 +25,10 @@ const theme = createTheme({
         root: {
           borderRadius: "50px",
           textTransform: "none",
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });
 
 export default theme;
