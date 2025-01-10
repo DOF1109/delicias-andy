@@ -10,7 +10,7 @@ const Categories = () => {
       flexDirection="column"
       alignItems="center"
       pt={5}
-      pb={5}
+      pb={6}
     >
       <Typography component="h2" variant="h5" fontWeight={600}>
         Nuestras categorías
@@ -20,7 +20,7 @@ const Categories = () => {
       </Typography>
       <Grid2
         container
-        spacing={3}
+        spacing={5}
         alignItems="center"
         justifyContent="center"
         width="100%"
