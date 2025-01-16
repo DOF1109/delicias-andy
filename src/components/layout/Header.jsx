@@ -81,17 +81,32 @@ const Header = () => {
               }}
             >
               <Link href="/" className="custom-link">
-                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                <Typography
+                  color={theme.dark}
+                  variant="h6"
+                  fontSize={16}
+                  fontWeight={600}
+                >
                   Inicio
                 </Typography>
               </Link>
               <Link href="/services" className="custom-link">
-                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                <Typography
+                  color={theme.dark}
+                  variant="h6"
+                  fontSize={16}
+                  fontWeight={600}
+                >
                   Servicios
                 </Typography>
               </Link>
               <Link href="/contact" className="custom-link">
-                <Typography color={theme.dark} variant="h6" fontSize={16}>
+                <Typography
+                  color={theme.dark}
+                  variant="h6"
+                  fontSize={16}
+                  fontWeight={600}
+                >
                   Contacto
                 </Typography>
               </Link>
@@ -155,7 +170,11 @@ const Header = () => {
                 </Link>
                 <Divider />
                 <MenuItem>
-                  <Link href="/" className="full-width" onClick={() => openDrawer(false)}>
+                  <Link
+                    href="/"
+                    className="full-width"
+                    onClick={() => openDrawer(false)}
+                  >
                     <Button variant="contained" color="secondary" fullWidth>
                       Haz tu pedido
                     </Button>

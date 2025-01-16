@@ -9,8 +9,8 @@ const Categories = () => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      pt={5}
-      pb={6}
+      pt={7}
+      pb={7}
     >
       <Typography component="h2" variant="h5" fontWeight={600}>
         Nuestras categorías
