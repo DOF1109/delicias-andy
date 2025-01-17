@@ -19,6 +19,7 @@ import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import logo from "@/../public/assets/images/logo-delicias-andy.png";
 
 const Header = () => {
   const theme = useTheme();
@@ -57,14 +58,14 @@ const Header = () => {
         >
           <Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
             <Box
-              p={1}
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
+              display="block"
+              width={isMobile ? 40 : 50}
+              height={isMobile ? 40 : 50}
+              m={1}
             >
               <Link href="/">
                 <Image
-                  src="/assets/images/logo-delicias-andy.png"
+                  src={logo}
                   alt="Logo Delicias Andy"
                   width={isMobile ? 40 : 50}
                   height={isMobile ? 40 : 50}
