@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const { Box, Typography, Button, Grid2, useTheme } = require("@mui/material");
 
-const Banner = () => {
+const HomeBanner = () => {
   const theme = useTheme();
 
   return (
@@ -92,4 +92,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default HomeBanner;
