@@ -1,95 +1,79 @@
-"use client";
+"use client"
 
+import { Box, Grid2, Typography, alpha, useTheme } from "@mui/material";
 import Image from "next/image";
-import cake1 from "@/../public/assets/images/cake1.jpeg";
-import Link from "next/link";
-
-const { Box, Typography, Button, Grid2, useTheme } = require("@mui/material");
+import cake1 from "@/../public/assets/images/cake1.jpeg"
 
 const ServicesBanner = () => {
-    const theme = useTheme();
+    const theme = useTheme()
 
     return (
-        <Grid2
+        <Box
             component="section"
-            container
-            spacing={6}
             sx={{
-                bgcolor: "primary.main",
-                borderBottomRightRadius: "50px",
-                borderTopLeftRadius: "50px",
-                p: 4,
+                background: alpha(theme.palette.secondary.dark, 0.75),
+                position: "relative"
             }}
-            >
-            <Grid2
-                size={{ xs: 12, md: 8 }}
-                display="flex"
-                flexDirection="column"
-                justifyContent="space-between"
-            >
-                <Box color={theme.dark}>
-                <Typography variant="h4" fontWeight={600}>
-                    Bienvenido a
-                </Typography>
-                <Typography component="h1" variant="h4" fontWeight={600}>
-                    Delicias Andy
-                </Typography>
-                <Typography mt={2} mb={5}>
-                    Descubre nuestras tortas y repostería, hechas con amor y los mejores
-                    ingredientes.
-                </Typography>
-                </Box>
-                <Box>
-                <Link href="/services">
-                    <Button variant="contained" color="secondary">
-                    Conócenos
-                    </Button>
-                </Link>
-                <Grid2
-                    container
-                    spacing={2}
-                    mt={2}
-                    flexDirection={{ xs: "column", sm: "row" }}
-                    color={theme.dark}
-                >
-                    <Grid2>
-                    <Typography variant="h6" fontWeight={600}>
-                        100%
-                    </Typography>
-                    <Typography variant="body2">Satisfacción garantizada</Typography>
-                    </Grid2>
-                    <Grid2>
-                    <Typography variant="h6" fontWeight={600}>
-                        +50
-                    </Typography>
-                    <Typography variant="body2">Variedades de tortas</Typography>
-                    </Grid2>
-                    <Grid2>
-                    <Typography variant="h6" fontWeight={600}>
-                        +10
-                    </Typography>
-                    <Typography variant="body2">Años de experiencia</Typography>
-                    </Grid2>
-                </Grid2>
-                </Box>
-            </Grid2>
-
-            <Grid2 size={{ xs: 12, md: 4 }}>
-                <Image
+        >
+            <Image
                 src={cake1}
-                alt="Torta"
+                alt="Torta de fondo"
                 style={{
                     width: "100%",
                     height: "auto",
-                    maxHeight: "300px",
                     objectFit: "cover",
-                    borderBottomRightRadius: "50px",
-                    borderTopLeftRadius: "50px",
+                    position: "absolute",
+                    zIndex: -1
                 }}
-                />
-            </Grid2>
-        </Grid2>
+            />
+            <Box 
+                color={theme.light}
+                display="flex"
+                flexDirection="column"
+                gap={{xs:6, sm:7, md:12}}
+                p={{xs:4, sm:6, md:7}}
+                py={{md: 12}}
+            >
+                <Typography>
+                    Explora nuestra variedad de tortas, masas dulces y repostería. Siente el sabor y la calidez en cada bocado.
+                </Typography>
+                <Grid2 container spacing={2}>
+                    <Grid2 size={{xs:12, sm:6, md:3}}>
+                        <Typography variant="h6" fontWeight={600}>
+                            +10
+                        </Typography>
+                        <Typography variant="body2">
+                            Años de experiencia
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{xs:12, sm:6, md:3}}>
+                        <Typography variant="h6" fontWeight={600}>
+                            +50
+                        </Typography>
+                        <Typography variant="body2">
+                            Productos ofrecidos
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{xs:12, sm:6, md:3}}>
+                        <Typography variant="h6" fontWeight={600}>
+                            +1.000
+                        </Typography>
+                        <Typography variant="body2">
+                            Clientes satisfechos
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{xs:12, sm:6, md:3}}>
+                        <Typography variant="h6" fontWeight={600}>
+                            +500
+                        </Typography>
+                        <Typography variant="body2">
+                            Pedidos personalizados
+                        </Typography>
+                    </Grid2>
+                </Grid2>
+            </Box>
+        </Box>
     )
 }
 
-export default ServicesBanner
+export default ServicesBanner;
