@@ -1,7 +1,7 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "../mui/theme";
-import { Box, Container, CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
-            <Container component="main" sx={{ pt: 15, flexGrow: 1 }}>
+            <Box component="main" sx={{ pt: 15, flexGrow: 1 }}>
               {children}
-            </Container>
+            </Box>
             <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>

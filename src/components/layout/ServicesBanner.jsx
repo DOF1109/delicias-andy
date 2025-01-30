@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Grid2, Typography, alpha, useTheme } from "@mui/material";
+import { Box, Container, Grid2, Typography, alpha, useTheme } from "@mui/material";
 import Image from "next/image";
 import cake1 from "@/../public/assets/images/cake1.jpeg";
 
@@ -27,45 +27,47 @@ const ServicesBanner = () => {
           zIndex: -1,
         }}
       />
-      <Box
-        color={theme.light}
-        display="flex"
-        flexDirection="column"
-        gap={{ xs: 6, sm: 7, md: 12 }}
-        p={{ xs: 4, sm: 6, md: 7 }}
-        py={{ md: 12 }}
-      >
-        <Typography>
-          Explora nuestra variedad de tortas, masas dulces y repostería. Siente
-          el sabor y la calidez en cada bocado.
-        </Typography>
-        <Grid2 container spacing={2}>
-          <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
-            <Typography variant="h6" fontWeight={600}>
-              +10
-            </Typography>
-            <Typography variant="body2">Años de experiencia</Typography>
+      <Container>
+        <Box
+          color={theme.light}
+          display="flex"
+          flexDirection="column"
+          gap={{ xs: 6, sm: 7, md: 12 }}
+          p={{ xs: 4, sm: 6, md: 7 }}
+          py={{ md: 12 }}
+        >
+          <Typography>
+            Explora nuestra variedad de tortas, masas dulces y repostería. Siente
+            el sabor y la calidez en cada bocado.
+          </Typography>
+          <Grid2 container spacing={2}>
+            <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h6" fontWeight={600}>
+                +10
+              </Typography>
+              <Typography variant="body2">Años de experiencia</Typography>
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h6" fontWeight={600}>
+                +50
+              </Typography>
+              <Typography variant="body2">Productos ofrecidos</Typography>
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h6" fontWeight={600}>
+                +1.000
+              </Typography>
+              <Typography variant="body2">Clientes satisfechos</Typography>
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
+              <Typography variant="h6" fontWeight={600}>
+                +500
+              </Typography>
+              <Typography variant="body2">Pedidos personalizados</Typography>
+            </Grid2>
           </Grid2>
-          <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
-            <Typography variant="h6" fontWeight={600}>
-              +50
-            </Typography>
-            <Typography variant="body2">Productos ofrecidos</Typography>
-          </Grid2>
-          <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
-            <Typography variant="h6" fontWeight={600}>
-              +1.000
-            </Typography>
-            <Typography variant="body2">Clientes satisfechos</Typography>
-          </Grid2>
-          <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
-            <Typography variant="h6" fontWeight={600}>
-              +500
-            </Typography>
-            <Typography variant="body2">Pedidos personalizados</Typography>
-          </Grid2>
-        </Grid2>
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
