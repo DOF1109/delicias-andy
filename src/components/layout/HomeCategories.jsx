@@ -2,7 +2,7 @@ import { Box, Grid2, Typography } from "@mui/material";
 import CustomCard from "../common/CustomCard";
 import categoryOne from "@/../public/assets/images/cake1.jpeg";
 
-const Categories = () => {
+const HomeCategories = () => {
   return (
     <Box
       component="section"
@@ -43,4 +43,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default HomeCategories;

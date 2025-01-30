@@ -1,13 +1,13 @@
 import HomeBanner from "@/components/layout/HomeBanner";
-import Buy from "@/components/layout/Buy";
-import Categories from "@/components/layout/Categories";
+import HomeBuy from "@/components/layout/HomeBuy";
+import HomeCategories from "@/components/layout/HomeCategories";
 
 const HomePage = () => {
   return (
     <>
       <HomeBanner />
-      <Categories />
-      <Buy />
+      <HomeCategories />
+      <HomeBuy />
     </>
   );
 };

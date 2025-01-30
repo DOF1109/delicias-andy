@@ -9,7 +9,7 @@ import cake1 from "@/../public/assets/images/cake1.jpeg";
 import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const Buy = () => {
+const HomeBuy = () => {
   const theme = useTheme();
 
   return (
@@ -83,4 +83,4 @@ const Buy = () => {
   );
 };
 
-export default Buy;
+export default HomeBuy;
