@@ -42,19 +42,19 @@ const HomeBuy = () => {
         </Box>
         <Grid2 container spacing={2} mb={4}>
           <Grid2 display="flex" gap={1} size={{ xs: 12, sm: 5 }}>
-            <AppleIcon />
+            <AppleIcon sx={{ color: theme.palette.secondary.light }} />
             <Typography>Ingredientes frescos</Typography>
           </Grid2>
           <Grid2 display="flex" gap={1} size={{ xs: 12, sm: 5 }}>
-            <CakeIcon />
+            <CakeIcon sx={{ color: theme.palette.secondary.light }} />
             <Typography>Diseños únicos</Typography>
           </Grid2>
           <Grid2 display="flex" gap={1} size={{ xs: 12, sm: 5 }}>
-            <StyleIcon />
+            <StyleIcon sx={{ color: theme.palette.secondary.light }} />
             <Typography>Variedad de opciones</Typography>
           </Grid2>
           <Grid2 display="flex" gap={1} size={{ xs: 12, sm: 5 }}>
-            <EmojiEmotionsIcon />
+            <EmojiEmotionsIcon sx={{ color: theme.palette.secondary.light }} />
             <Typography>Atención personalizada</Typography>
           </Grid2>
         </Grid2>
