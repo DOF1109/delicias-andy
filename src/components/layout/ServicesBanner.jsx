@@ -33,8 +33,8 @@ const ServicesBanner = () => {
           display="flex"
           flexDirection="column"
           gap={{ xs: 6, sm: 7, md: 12 }}
-          p={{ xs: 4, sm: 6, md: 7 }}
-          py={{ md: 12 }}
+          py={{ xs: 4, sm: 6, md: 12 }}
+          px={4}
         >
           <Typography>
             Explora nuestra variedad de tortas, masas dulces y repostería. Siente

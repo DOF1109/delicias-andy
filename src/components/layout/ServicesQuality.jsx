@@ -16,17 +16,6 @@ const ServicesQuality = () => {
   return (
     <Container component="section">
       <Grid2 container>
-        <Grid2 size={{ xs: 12, md: 6 }} display={{ xs: "none", md: "block" }}>
-          <Image
-            src={cake1}
-            alt="Torta de calidad"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </Grid2>
         <Grid2 size={{ xs: 12, md: 6 }}>
           <Box
             sx={{
@@ -65,6 +54,17 @@ const ServicesQuality = () => {
               description="Descubre nuestra repostería que combina creatividad y sabor."
             />
           </Box>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 6 }}>
+          <Image
+            src={cake1}
+            alt="Torta de calidad"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
         </Grid2>
       </Grid2>
     </Container>
