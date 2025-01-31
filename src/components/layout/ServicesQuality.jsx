@@ -16,14 +16,13 @@ const ServicesQuality = () => {
   return (
     <Container component="section">
       <Grid2 container>
-        <Grid2 size={{ xs: 12, md: 6 }}>
+        <Grid2 size={{ xs: 12, md: 6 }} p={4}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               height: "100%",
               justifyContent: "center",
-              p: 4,
               gap: 2,
             }}
           >
