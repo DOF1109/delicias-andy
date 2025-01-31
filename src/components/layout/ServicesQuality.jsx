@@ -55,14 +55,15 @@ const ServicesQuality = () => {
             />
           </Box>
         </Grid2>
-        <Grid2 size={{ xs: 12, md: 6 }}>
+        <Grid2 size={{ xs: 12, md: 6 }} p={4}>
           <Image
             src={cake1}
             alt="Torta de calidad"
             style={{
-              width: "100%",
+              borderRadius: "20px",
               height: "100%",
               objectFit: "cover",
+              width: "100%",
             }}
           />
         </Grid2>
