@@ -1,8 +1,15 @@
 "use client";
 
-import { Box, Container, Grid2, Typography, alpha, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid2,
+  Typography,
+  alpha,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
-import cake1 from "@/../public/assets/images/cake1.jpeg";
+import cake from "@/../public/assets/images/cake8.jpeg";
 
 const ServicesBanner = () => {
   const theme = useTheme();
@@ -17,7 +24,7 @@ const ServicesBanner = () => {
       }}
     >
       <Image
-        src={cake1}
+        src={cake}
         alt="Torta de fondo"
         style={{
           width: "100%",
@@ -37,8 +44,8 @@ const ServicesBanner = () => {
           px={4}
         >
           <Typography>
-            Explora nuestra variedad de tortas, masas dulces y repostería. Siente
-            el sabor y la calidez en cada bocado.
+            Explora nuestra variedad de tortas, masas dulces y repostería.
+            Siente el sabor y la calidez en cada bocado.
           </Typography>
           <Grid2 container spacing={2}>
             <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>

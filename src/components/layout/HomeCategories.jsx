@@ -1,6 +1,9 @@
 import { Box, Grid2, Typography } from "@mui/material";
 import CustomCard from "../common/CustomCard";
 import categoryOne from "@/../public/assets/images/cake1.jpeg";
+import categoryTwo from "@/../public/assets/images/cake6.jpeg";
+import categoryThree from "@/../public/assets/images/cake7.jpeg";
+import categoryFour from "@/../public/assets/images/cake9.jpeg";
 
 const HomeCategories = () => {
   return (
@@ -26,17 +29,17 @@ const HomeCategories = () => {
         width="100%"
         px={{ sm: 4 }}
       >
-        <Grid2 size={{ xs: 10, sm: 5, md: 3 }} height="100%">
+        <Grid2 size={{ xs: 10, sm: 6, md: 3 }}>
           <CustomCard img={categoryOne} title="Tortas Clásicas" />
         </Grid2>
-        <Grid2 size={{ xs: 10, sm: 5, md: 3 }}>
-          <CustomCard img={categoryOne} title="Repostería Fina" />
+        <Grid2 size={{ xs: 10, sm: 6, md: 3 }}>
+          <CustomCard img={categoryTwo} title="Repostería Fina" />
         </Grid2>
-        <Grid2 size={{ xs: 10, sm: 5, md: 3 }}>
-          <CustomCard img={categoryOne} title="Masas Dulces" />
+        <Grid2 size={{ xs: 10, sm: 6, md: 3 }}>
+          <CustomCard img={categoryThree} title="Masas Dulces" />
         </Grid2>
-        <Grid2 size={{ xs: 10, sm: 5, md: 3 }}>
-          <CustomCard img={categoryOne} title="Personalizadas" />
+        <Grid2 size={{ xs: 10, sm: 6, md: 3 }}>
+          <CustomCard img={categoryFour} title="Personalizadas" />
         </Grid2>
       </Grid2>
     </Box>

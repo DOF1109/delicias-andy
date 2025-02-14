@@ -2,12 +2,18 @@
 
 import CustomItem from "../common/CustomItem";
 
-const { Grid2, Box, Typography, useTheme, Container } = require("@mui/material");
+const {
+  Grid2,
+  Box,
+  Typography,
+  useTheme,
+  Container,
+} = require("@mui/material");
 import CakeIcon from "@mui/icons-material/Cake";
 import CookieIcon from "@mui/icons-material/Cookie";
 import BrushIcon from "@mui/icons-material/Brush";
 
-import cake1 from "@/../public/assets/images/cake1.jpeg";
+import cake from "@/../public/assets/images/cake5.jpeg";
 import Image from "next/image";
 
 const ServicesQuality = () => {
@@ -43,7 +49,9 @@ const ServicesQuality = () => {
               description="Diseña la torta perfecta para cualquier ocasión especial."
             />
             <CustomItem
-              icon={<CookieIcon sx={{ color: theme.palette.secondary.light }} />}
+              icon={
+                <CookieIcon sx={{ color: theme.palette.secondary.light }} />
+              }
               title="Masas dulces"
               description="Disfruta de nuestras deliciosas y variadas masas dulces."
             />
@@ -56,11 +64,12 @@ const ServicesQuality = () => {
         </Grid2>
         <Grid2 size={{ xs: 12, md: 6 }} p={4}>
           <Image
-            src={cake1}
+            src={cake}
             alt="Torta de calidad"
             style={{
               borderRadius: "20px",
               height: "100%",
+              maxHeight: "600px",
               objectFit: "cover",
               width: "100%",
             }}

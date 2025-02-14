@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 
-const {
-  Card,
-  Typography,
-  useTheme,
-  alpha,
-  Box,
-} = require("@mui/material");
+const { Card, Typography, useTheme, alpha, Box } = require("@mui/material");
 
 const CustomCard = ({ img, title }) => {
   const theme = useTheme();
@@ -26,8 +20,7 @@ const CustomCard = ({ img, title }) => {
         alt="Categoría"
         style={{
           width: "100%",
-          height: "auto",
-          maxHeight: "250px",
+          height: "230px",
           objectFit: "cover",
         }}
       />

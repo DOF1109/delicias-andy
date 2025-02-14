@@ -5,7 +5,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import CakeIcon from "@mui/icons-material/Cake";
 import StyleIcon from "@mui/icons-material/Style";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
-import cake1 from "@/../public/assets/images/cake1.jpeg";
+import cake from "@/../public/assets/images/cake3.jpg";
 import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
@@ -68,7 +68,7 @@ const HomeBuy = () => {
       </Grid2>
       <Grid2 size={{ xs: 12, md: 4 }} display={{ xs: "none", md: "flex" }}>
         <Image
-          src={cake1}
+          src={cake}
           alt="Torta"
           style={{
             width: "100%",

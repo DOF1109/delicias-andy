@@ -11,7 +11,6 @@ const {
   IconButton,
   MenuItem,
   Drawer,
-  Divider,
   useMediaQuery,
 } = require("@mui/material");
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
@@ -169,7 +168,6 @@ const Header = () => {
                     Contacto
                   </MenuItem>
                 </Link>
-                <Divider />
                 <MenuItem>
                   <Link
                     href="/"
