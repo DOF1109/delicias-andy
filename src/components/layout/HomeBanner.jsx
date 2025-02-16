@@ -28,10 +28,8 @@ const HomeBanner = () => {
         justifyContent="space-between"
       >
         <Box color={theme.dark}>
-          <Typography variant="h4" fontWeight={600}>
-            Bienvenido a
-          </Typography>
           <Typography component="h1" variant="h4" fontWeight={600}>
+            Bienvenido a <br />
             Delicias Andy
           </Typography>
           <Typography mt={2} mb={5}>
