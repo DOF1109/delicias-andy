@@ -15,7 +15,8 @@ const ContactHello = () => {
       py={6}
       spacing={4}
       sx={{
-        background: `linear-gradient( ${theme.palette.secondary.dark}, ${theme.palette.secondary.light})`,
+        background:
+          "linear-gradient(rgba(153,2,68,1) 40%, rgba(255,93,140,1) 100%)",
         color: theme.light,
       }}
     >
