@@ -1,3 +1,4 @@
+import ContactHello from "@/components/layout/ContactHello";
 import ContactMap from "@/components/layout/ContactMap";
 import { Container } from "@mui/material";
 
@@ -8,6 +9,7 @@ const Contact = () => {
     <Container>
       <ContactBanner />
       <ContactMap />
+      <ContactHello />
     </Container>
   );
 };
