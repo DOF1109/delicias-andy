@@ -1,4 +1,6 @@
-import { Box, Grid2, Typography } from "@mui/material";
+"use client";
+
+import { Box, Grid2, Typography, useTheme } from "@mui/material";
 import CustomCard from "../common/CustomCard";
 import categoryOne from "@/../public/assets/images/cake1.jpeg";
 import categoryTwo from "@/../public/assets/images/cake6.jpeg";
@@ -6,6 +8,8 @@ import categoryThree from "@/../public/assets/images/cake7.jpeg";
 import categoryFour from "@/../public/assets/images/cake9.jpeg";
 
 const HomeCategories = () => {
+  const theme = useTheme();
+
   return (
     <Box
       component="section"
@@ -15,7 +19,12 @@ const HomeCategories = () => {
       pt={7}
       pb={7}
     >
-      <Typography component="h2" variant="h5" fontWeight={600}>
+      <Typography
+        component="h2"
+        color={theme.palette.secondary.light}
+        variant="h5"
+        fontWeight={600}
+      >
         Nuestras categorías
       </Typography>
       <Typography mt={2} mb={5} mx={2} textAlign="center">

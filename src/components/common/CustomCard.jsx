@@ -10,6 +10,7 @@ const CustomCard = ({ img, title }) => {
   return (
     <Card
       sx={{
+        borderRadius: "20px",
         display: "flex",
         flexDirection: "column",
         position: "relative",

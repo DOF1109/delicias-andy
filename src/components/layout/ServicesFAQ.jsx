@@ -14,9 +14,13 @@ const {
   AccordionDetails,
 } = require("@mui/material");
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useRef } from "react";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const ServicesFAQ = () => {
   const theme = useTheme();
+  const imageRef = useRef(null);
+  const isIntersecting = useIntersectionObserver(imageRef, { threshold: 0.1 });
 
   return (
     <Container component="section">
@@ -27,6 +31,7 @@ const ServicesFAQ = () => {
           p={4}
         >
           <Image
+            ref={imageRef}
             src={cake}
             alt="Imágen de preguntas"
             style={{
@@ -35,6 +40,8 @@ const ServicesFAQ = () => {
               maxHeight: "600px",
               objectFit: "cover",
               width: "100%",
+              boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
+              animation: isIntersecting ? "fadeInScaleUp 1s ease-in-out" : "none",
             }}
           />
         </Grid2>
@@ -48,11 +55,13 @@ const ServicesFAQ = () => {
               gap: 2,
             }}
           >
-            <Typography variant="body2" color={theme.palette.secondary.light}>
+            <Typography
+              component="h2"
+              color={theme.palette.secondary.light}
+              fontWeight={600}
+              variant="h5"
+            >
               Preguntas frecuentes
-            </Typography>
-            <Typography component="h2" fontWeight={600} variant="h5">
-              Respuestas a tus dudas
             </Typography>
             <Box>
               <Accordion defaultExpanded>

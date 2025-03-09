@@ -8,9 +8,13 @@ import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import cake from "@/../public/assets/images/cake3.jpg";
 import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useRef } from "react";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const HomeBuy = () => {
   const theme = useTheme();
+  const imageRef = useRef(null);
+  const isIntersecting = useIntersectionObserver(imageRef, { threshold: 0.1 });
 
   return (
     <Grid2
@@ -29,13 +33,13 @@ const HomeBuy = () => {
             mb: 4,
           }}
         >
-          <Typography variant="body2" color={theme.palette.secondary.light}>
-            Delicias que te encantarán
-          </Typography>
-          <Typography component="h2" fontWeight={600} my={1} variant="h5">
-            !Haz tu pedido hoy!
-          </Typography>
-          <Typography>
+          <Typography
+            component="h2"
+            color={theme.palette.secondary.light}
+            fontWeight={600}
+            my={1}
+            variant="h5"
+          >
             Descubre la mágia de nuestros sabores y sorprende a tus seres
             queridos.
           </Typography>
@@ -68,6 +72,7 @@ const HomeBuy = () => {
       </Grid2>
       <Grid2 size={{ xs: 12, md: 4 }} display={{ xs: "none", md: "flex" }}>
         <Image
+          ref={imageRef}
           src={cake}
           alt="Torta"
           style={{
@@ -76,6 +81,8 @@ const HomeBuy = () => {
             borderRadius: "20px",
             maxHeight: "300px",
             objectFit: "cover",
+            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
+            animation: isIntersecting ? "fadeInScaleUp 1s ease-in-out" : "none",
           }}
         />
       </Grid2>

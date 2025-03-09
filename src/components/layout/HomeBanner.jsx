@@ -3,11 +3,15 @@
 import Image from "next/image";
 import cake from "@/../public/assets/images/cake2.jpg";
 import Link from "next/link";
+import { useRef } from "react";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const { Box, Typography, Button, Grid2, useTheme } = require("@mui/material");
 
 const HomeBanner = () => {
   const theme = useTheme();
+  const imageRef = useRef(null);
+  const isIntersecting = useIntersectionObserver(imageRef, { threshold: 0.1 });
 
   return (
     <Grid2
@@ -15,7 +19,8 @@ const HomeBanner = () => {
       container
       spacing={6}
       sx={{
-        bgcolor: "primary.main",
+        background:
+          "linear-gradient(rgba(255, 192, 203, 1) 40%, rgba(248, 59, 107, 1) 100%)",
         borderBottomRightRadius: "50px",
         borderTopLeftRadius: "50px",
         p: 4,
@@ -54,19 +59,19 @@ const HomeBanner = () => {
               <Typography variant="h6" fontWeight={600}>
                 100%
               </Typography>
-              <Typography variant="body2">Satisfacción garantizada</Typography>
+              <Typography variant="body2" fontWeight={600}>Satisfacción garantizada</Typography>
             </Grid2>
             <Grid2>
               <Typography variant="h6" fontWeight={600}>
-                +50
+                +30
               </Typography>
-              <Typography variant="body2">Variedades de tortas</Typography>
+              <Typography variant="body2" fontWeight={600}>Variedades de tortas</Typography>
             </Grid2>
             <Grid2>
               <Typography variant="h6" fontWeight={600}>
-                +10
+                +9
               </Typography>
-              <Typography variant="body2">Años de experiencia</Typography>
+              <Typography variant="body2" fontWeight={600}>Años de experiencia</Typography>
             </Grid2>
           </Grid2>
         </Box>
@@ -83,6 +88,8 @@ const HomeBanner = () => {
             objectFit: "cover",
             borderBottomRightRadius: "50px",
             borderTopLeftRadius: "50px",
+            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
+            animation: "fadeInScaleUp 1s ease-in-out",
           }}
         />
       </Grid2>

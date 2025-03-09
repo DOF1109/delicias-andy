@@ -15,9 +15,13 @@ import BrushIcon from "@mui/icons-material/Brush";
 
 import cake from "@/../public/assets/images/cake5.jpeg";
 import Image from "next/image";
+import { useRef } from "react";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const ServicesQuality = () => {
   const theme = useTheme();
+  const imageRef = useRef(null);
+  const isIntersecting = useIntersectionObserver(imageRef, { threshold: 0.1 });
 
   return (
     <Container component="section">
@@ -32,11 +36,13 @@ const ServicesQuality = () => {
               gap: 2,
             }}
           >
-            <Typography variant="body2" color={theme.palette.secondary.light}>
+            <Typography
+              component="h2"
+              color={theme.palette.secondary.light}
+              fontWeight={600}
+              variant="h5"
+            >
               Calidad y sabor
-            </Typography>
-            <Typography component="h2" fontWeight={600} variant="h5">
-              Nuestro compromiso con la calidad
             </Typography>
             <Typography mb={3}>
               En Delicias Andy, cada producto es una obra de arte. Utilizamos
@@ -64,6 +70,7 @@ const ServicesQuality = () => {
         </Grid2>
         <Grid2 size={{ xs: 12, md: 6 }} p={4}>
           <Image
+            ref={imageRef}
             src={cake}
             alt="Torta de calidad"
             style={{
@@ -72,6 +79,8 @@ const ServicesQuality = () => {
               maxHeight: "600px",
               objectFit: "cover",
               width: "100%",
+              boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
+              animation: isIntersecting ? "fadeInScaleUp 1s ease-in-out" : "none",
             }}
           />
         </Grid2>
