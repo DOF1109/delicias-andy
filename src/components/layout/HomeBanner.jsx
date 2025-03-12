@@ -83,21 +83,16 @@ const HomeBanner = () => {
         </Box>
       </Grid2>
 
-      <Grid2 size={{ xs: 12, md: 4 }}>
+      <Grid2 size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
         <Image
           src={cake}
           alt="Torta"
+          className="custom-shadow"
           style={{
             width: "280px",
             height: "280px",
             objectFit: "cover",
             borderRadius: "50%",
-            boxShadow: `
-              0px 4px 15px rgba(0, 0, 0, 0.4),
-              0px 8px 30px rgba(0, 0, 0, 0.3),
-              0px 12px 45px rgba(0, 0, 0, 0.2),
-              inset 0px 0px 10px rgba(255, 255, 255, 0.5)
-            `,
             animation: "fadeInScaleUp 1s ease-in-out",
           }}
         />

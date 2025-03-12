@@ -34,13 +34,13 @@ const ServicesFAQ = () => {
             ref={imageRef}
             src={cake}
             alt="Imágen de preguntas"
+            className="custom-shadow"
             style={{
               borderRadius: "20px",
               height: "100%",
               maxHeight: "600px",
               objectFit: "cover",
               width: "100%",
-              boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
               animation: isIntersecting ? "fadeInScaleUp 1s ease-in-out" : "none",
             }}
           />

@@ -50,7 +50,7 @@ const Header = () => {
             backdropFilter: "blur(.25rem)",
             border: "1px solid",
             borderColor: alpha(theme.palette.grey[300], 0.9),
-            backgroundColor: alpha(theme.palette.primary.main, 0.25),
+            backgroundColor: alpha(theme.palette.primary.main, 0.65),
             boxShadow: theme.customShadow,
             padding: ".25rem 1rem",
           }}

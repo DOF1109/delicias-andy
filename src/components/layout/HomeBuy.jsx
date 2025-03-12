@@ -75,13 +75,13 @@ const HomeBuy = () => {
           ref={imageRef}
           src={cake}
           alt="Torta"
+          className="custom-shadow"
           style={{
             width: "100%",
             height: "auto",
             borderRadius: "20px",
             maxHeight: "300px",
             objectFit: "cover",
-            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
             animation: isIntersecting ? "fadeInScaleUp 1s ease-in-out" : "none",
           }}
         />
