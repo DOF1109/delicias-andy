@@ -2,10 +2,10 @@
 
 import { Box, Grid2, Typography, useTheme } from "@mui/material";
 import CustomCard from "../common/CustomCard";
-import categoryOne from "@/../public/assets/images/cake1.jpeg";
-import categoryTwo from "@/../public/assets/images/cake6.jpeg";
-import categoryThree from "@/../public/assets/images/cake7.jpeg";
-import categoryFour from "@/../public/assets/images/cake9.jpeg";
+import categoryOne from "@/../public/assets/images/cake1.webp";
+import categoryTwo from "@/../public/assets/images/cake6.webp";
+import categoryThree from "@/../public/assets/images/cake7.webp";
+import categoryFour from "@/../public/assets/images/cake9.webp";
 
 const HomeCategories = () => {
   const theme = useTheme();

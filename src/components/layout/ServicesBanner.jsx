@@ -9,7 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import cake from "@/../public/assets/images/cake8.jpeg";
+import cake from "@/../public/assets/images/cake8.webp";
 
 const ServicesBanner = () => {
   const theme = useTheme();

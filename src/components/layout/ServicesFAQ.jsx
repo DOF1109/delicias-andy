@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import cake from "@/../public/assets/images/cake4.jpeg";
+import cake from "@/../public/assets/images/cake4.webp";
 
 const {
   Container,

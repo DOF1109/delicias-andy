@@ -18,7 +18,7 @@ import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import logo from "@/../public/assets/images/logo-delicias-andy.png";
+import logo from "@/../public/assets/images/logo-delicias-andy.webp";
 
 const Header = () => {
   const theme = useTheme();

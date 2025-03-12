@@ -5,7 +5,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import CakeIcon from "@mui/icons-material/Cake";
 import StyleIcon from "@mui/icons-material/Style";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
-import cake from "@/../public/assets/images/cake3.jpg";
+import cake from "@/../public/assets/images/cake3.webp";
 import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useRef } from "react";

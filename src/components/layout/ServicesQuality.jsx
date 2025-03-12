@@ -13,7 +13,7 @@ import CakeIcon from "@mui/icons-material/Cake";
 import CookieIcon from "@mui/icons-material/Cookie";
 import BrushIcon from "@mui/icons-material/Brush";
 
-import cake from "@/../public/assets/images/cake5.jpeg";
+import cake from "@/../public/assets/images/cake5.webp";
 import Image from "next/image";
 import { useRef } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";

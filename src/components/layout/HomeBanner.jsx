@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import cake from "@/../public/assets/images/cake2.jpg";
+import cake from "@/../public/assets/images/logo-delicias-andy.webp";
 import Link from "next/link";
 import { useRef } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
@@ -59,19 +59,25 @@ const HomeBanner = () => {
               <Typography variant="h6" fontWeight={600}>
                 100%
               </Typography>
-              <Typography variant="body2" fontWeight={600}>Satisfacción garantizada</Typography>
+              <Typography variant="body2" fontWeight={600}>
+                Satisfacción garantizada
+              </Typography>
             </Grid2>
             <Grid2>
               <Typography variant="h6" fontWeight={600}>
                 +30
               </Typography>
-              <Typography variant="body2" fontWeight={600}>Variedades de tortas</Typography>
+              <Typography variant="body2" fontWeight={600}>
+                Variedades de tortas
+              </Typography>
             </Grid2>
             <Grid2>
               <Typography variant="h6" fontWeight={600}>
                 +9
               </Typography>
-              <Typography variant="body2" fontWeight={600}>Años de experiencia</Typography>
+              <Typography variant="body2" fontWeight={600}>
+                Años de experiencia
+              </Typography>
             </Grid2>
           </Grid2>
         </Box>
@@ -82,13 +88,16 @@ const HomeBanner = () => {
           src={cake}
           alt="Torta"
           style={{
-            width: "100%",
-            height: "auto",
-            maxHeight: "300px",
+            width: "280px",
+            height: "280px",
             objectFit: "cover",
-            borderBottomRightRadius: "50px",
-            borderTopLeftRadius: "50px",
-            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.4)",
+            borderRadius: "50%",
+            boxShadow: `
+              0px 4px 15px rgba(0, 0, 0, 0.4),
+              0px 8px 30px rgba(0, 0, 0, 0.3),
+              0px 12px 45px rgba(0, 0, 0, 0.2),
+              inset 0px 0px 10px rgba(255, 255, 255, 0.5)
+            `,
             animation: "fadeInScaleUp 1s ease-in-out",
           }}
         />
