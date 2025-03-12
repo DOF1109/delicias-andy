@@ -7,6 +7,11 @@ import Link from "next/link";
 
 const Footer = () => {
   const theme = useTheme();
+  const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_LINK;
+  const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
+  const whatsappLink =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_LINK +
+    "?text=Hola,%20quisiera%20hacer%20una%20consulta";
 
   return (
     <Box component="footer" sx={{ backgroundColor: theme.black }}>
@@ -22,19 +27,13 @@ const Footer = () => {
         }}
       >
         <Box display="flex" gap={3}>
-          <Link
-            href="https://api.whatsapp.com/send?phone=%2B543873556647&context=ARDQajw7Yk9iUTWJ6H8qz2x4EwWqouwfEMQ0S8PWof241sZBIGhTGT9SgsMk1c13aH4QSKKCbLWdxzJ-iTI5jSErPulPwWrxGCOunoINZy3wVdylXNGI3PAma7yl7VOQ23BCHYXf90HS63BeU7YQCBQc1A&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawI59-NleHRuA2FlbQIxMAABHewtIY9DS2AnWc42BdB4IDVb-MYcD3lQP4qBBwlJxkpDAZwir31MoH8y6A_aem_FjJVgkr33IZfYrTHqbyAgA"
-            target="_blank"
-          >
+          <Link href={whatsappLink} target="_blank">
             <WhatsAppIcon color="primary" sx={{ height: "100%" }} />
           </Link>
-          <Link
-            href="https://www.facebook.com/deliciasandy.miriamandreaochoa"
-            target="_blank"
-          >
+          <Link href={facebookLink} target="_blank">
             <FacebookIcon color="primary" sx={{ height: "100%" }} />
           </Link>
-          <Link href="https://www.instagram.com/delicias_andy/" target="_blank">
+          <Link href={instagramLink} target="_blank">
             <InstagramIcon color="primary" sx={{ height: "100%" }} />
           </Link>
         </Box>

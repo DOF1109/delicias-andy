@@ -6,6 +6,8 @@ const { Box, Grid2, Typography, useTheme } = require("@mui/material");
 
 const ContactHello = () => {
   const theme = useTheme();
+  const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_LINK;
+  const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
 
   return (
     <Grid2
@@ -48,10 +50,10 @@ const ContactHello = () => {
           <Typography variant="h6" mt={4}>
             Síguenos en nuestras redes
           </Typography>
-          <Link href="https://www.facebook.com/deliciasandy.miriamandreaochoa" className="blank-link" target="_blank">
+          <Link href={facebookLink} className="blank-link" target="_blank">
             <Typography>Facebook</Typography>
           </Link>
-          <Link href="https://www.instagram.com/delicias_andy/" className="blank-link" target="_blank">
+          <Link href={instagramLink} className="blank-link" target="_blank">
             <Typography>Instagram</Typography>
           </Link>
         </Box>

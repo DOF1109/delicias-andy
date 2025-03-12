@@ -24,6 +24,9 @@ const Header = () => {
   const theme = useTheme();
   const [openMenu, setOpenMenu] = useState(false);
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const whatsappLink =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_LINK +
+    "?text=Hola,%20quisiera%20hacer%20un%20pedido";
 
   const openDrawer = (newOpen) => {
     setOpenMenu(newOpen);
@@ -115,7 +118,7 @@ const Header = () => {
           <Box
             sx={{ display: { xs: "none", sm: "flex" }, alignItems: "center" }}
           >
-            <Link href="/">
+            <Link href={whatsappLink} target="_blank">
               <Button variant="contained" color="secondary">
                 Haz tu pedido
               </Button>
@@ -170,9 +173,10 @@ const Header = () => {
                 </Link>
                 <MenuItem>
                   <Link
-                    href="/"
+                    href={whatsappLink}
                     className="full-width"
                     onClick={() => openDrawer(false)}
+                    target="_blank"
                   >
                     <Button variant="contained" color="secondary" fullWidth>
                       Haz tu pedido
@@ -189,14 +193,3 @@ const Header = () => {
 };
 
 export default Header;
-
-/*
-Guide
-
-https://github.com/mui/material-ui/blob/v6.1.6/docs/data/material/getting-started/templates/marketing-page/components/AppAppBar.js
-
-https://github.com/mui/material-ui/blob/v6.1.6/docs/data/material/getting-started/templates/shared-theme/themePrimitives.js
-
-https://mui.com/material-ui/getting-started/templates/marketing-page/
-
-*/

@@ -10,11 +10,15 @@ import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useRef } from "react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
+import Link from "next/link";
 
 const HomeBuy = () => {
   const theme = useTheme();
   const imageRef = useRef(null);
   const isIntersecting = useIntersectionObserver(imageRef, { threshold: 0.1 });
+  const whatsappLink =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMBER_LINK +
+    "?text=Hola,%20quisiera%20hacer%20un%20pedido";
 
   return (
     <Grid2
@@ -62,13 +66,15 @@ const HomeBuy = () => {
             <Typography>Atención personalizada</Typography>
           </Grid2>
         </Grid2>
-        <Button
-          variant="contained"
-          color="secondary"
-          startIcon={<ShoppingCartIcon />}
-        >
-          Comprar
-        </Button>
+        <Link href={whatsappLink} target="_blank">
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<ShoppingCartIcon />}
+          >
+            Comprar
+          </Button>
+        </Link>
       </Grid2>
       <Grid2 size={{ xs: 12, md: 4 }} display={{ xs: "none", md: "flex" }}>
         <Image
