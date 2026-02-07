@@ -149,7 +149,7 @@ const Header = () => {
                 </Box>
                 <Link href="/" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.light, fontWeight: 600 }}
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Inicio
@@ -157,7 +157,7 @@ const Header = () => {
                 </Link>
                 <Link href="/services" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.light, fontWeight: 600 }}
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Servicios
@@ -165,7 +165,7 @@ const Header = () => {
                 </Link>
                 <Link href="/contact" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.light, fontWeight: 600 }}
+                    sx={{ color: theme.dark, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Contacto
