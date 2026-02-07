@@ -50,7 +50,7 @@ const ServicesBanner = () => {
           <Grid2 container spacing={2}>
             <Grid2 size={{ xs: 12, sm: 6, md: 3 }}>
               <Typography variant="h6" fontWeight={600}>
-                +9
+                10
               </Typography>
               <Typography variant="body2" fontWeight={600}>Años de experiencia</Typography>
             </Grid2>

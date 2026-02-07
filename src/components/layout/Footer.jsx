@@ -38,7 +38,7 @@ const Footer = () => {
           </Link>
         </Box>
         <Typography variant="caption" textAlign="center">
-          © Delicias Andy 2025. Todos los derechos reservados.
+          © Delicias Andy 2026. Todos los derechos reservados.
         </Typography>
       </Container>
     </Box>

@@ -73,7 +73,7 @@ const HomeBanner = () => {
             </Grid2>
             <Grid2>
               <Typography variant="h6" fontWeight={600}>
-                +9
+                10
               </Typography>
               <Typography variant="body2" fontWeight={600}>
                 Años de experiencia
