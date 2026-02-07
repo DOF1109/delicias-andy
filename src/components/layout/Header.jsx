@@ -85,7 +85,7 @@ const Header = () => {
             >
               <Link href="/" className="custom-link">
                 <Typography
-                  color={theme.dark}
+                  color={theme.light}
                   variant="h6"
                   fontSize={16}
                   fontWeight={600}
@@ -95,7 +95,7 @@ const Header = () => {
               </Link>
               <Link href="/services" className="custom-link">
                 <Typography
-                  color={theme.dark}
+                  color={theme.light}
                   variant="h6"
                   fontSize={16}
                   fontWeight={600}
@@ -105,7 +105,7 @@ const Header = () => {
               </Link>
               <Link href="/contact" className="custom-link">
                 <Typography
-                  color={theme.dark}
+                  color={theme.light}
                   variant="h6"
                   fontSize={16}
                   fontWeight={600}
@@ -149,7 +149,7 @@ const Header = () => {
                 </Box>
                 <Link href="/" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.dark, fontWeight: 600 }}
+                    sx={{ color: theme.light, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Inicio
@@ -157,7 +157,7 @@ const Header = () => {
                 </Link>
                 <Link href="/services" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.dark, fontWeight: 600 }}
+                    sx={{ color: theme.light, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Servicios
@@ -165,7 +165,7 @@ const Header = () => {
                 </Link>
                 <Link href="/contact" className="blank-link">
                   <MenuItem
-                    sx={{ color: theme.dark, fontWeight: 600 }}
+                    sx={{ color: theme.light, fontWeight: 600 }}
                     onClick={() => openDrawer(false)}
                   >
                     Contacto

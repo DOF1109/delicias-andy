@@ -43,6 +43,7 @@ const CustomCard = ({ img, title }) => {
           fontWeight={600}
           sx={{
             backgroundColor: alpha(theme.palette.primary.main, 0.85),
+            color: theme.light,
             p: 1,
             borderRadius: "8px",
           }}
