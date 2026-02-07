@@ -5,7 +5,7 @@
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: rgba(245, 0, 87, 0.1);
+    background-color: rgba(8, 0, 117, 0.1);
     border-radius: 0.25rem;
   }
 }
