@@ -20,7 +20,7 @@ const HomeBanner = () => {
       spacing={6}
       sx={{
         background:
-          "linear-gradient(rgba(255, 192, 203, 1) 40%, rgba(248, 59, 107, 1) 100%)",
+          "linear-gradient(rgba(116, 145, 255, 1) 40%, rgba(19, 27, 83, 1) 100%)",
         borderBottomRightRadius: "50px",
         borderTopLeftRadius: "50px",
         p: 4,
@@ -32,7 +32,7 @@ const HomeBanner = () => {
         flexDirection="column"
         justifyContent="space-between"
       >
-        <Box color={theme.dark}>
+        <Box color={theme.light}>
           <Typography component="h1" variant="h4" fontWeight={600}>
             Bienvenido a <br />
             Delicias Andy
@@ -53,7 +53,7 @@ const HomeBanner = () => {
             spacing={2}
             mt={2}
             flexDirection={{ xs: "column", sm: "row" }}
-            color={theme.dark}
+            color={theme.light}
           >
             <Grid2>
               <Typography variant="h6" fontWeight={600}>

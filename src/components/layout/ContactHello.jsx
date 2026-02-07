@@ -19,7 +19,7 @@ const ContactHello = () => {
       spacing={4}
       sx={{
         background:
-          "linear-gradient(rgba(153,2,68,1) 40%, rgba(255,93,140,1) 100%)",
+          "linear-gradient(rgba(32, 48, 140,1) 40%, rgba(116, 145, 255,1) 100%)",
         borderEndEndRadius: "20px",
         borderEndStartRadius: "20px",
         color: theme.light,

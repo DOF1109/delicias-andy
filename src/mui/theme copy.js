@@ -8,17 +8,17 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#344eff",
+      main: "#ffc0cb",
     },
     secondary: {
-      main: "#131b53",
+      main: "#f50057",
     },
   },
   customShadow:
     "hsla(220, 30%, 5%, 0.09) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px",
-  dark: "#131b53",
-  light: "#fbf5ff",
-  black: "#060045",
+  dark: "#4d041c",
+  light: "#fff1f3",
+  black: "#28232a",
   components: {
     MuiButton: {
       styleOverrides: {
